@@ -1,0 +1,108 @@
+.page .body-wrapper .sidebar__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  margin: 0px 20px 20px 20px;
+  background-color: #1F2021;
+}
+.page .body-wrapper .sidebar__item i {
+  border: 1px solid #fff;
+  color: #fff;
+  font-size: 40px;
+}
+
+.page .body-wrapper .sidebar__item.active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  margin: 0px 20px 20px 20px;
+  background-color: #ffd700;
+}
+.page .body-wrapper .sidebar__item.active i {
+  border: 1px solid #000;
+  color: #000;
+  font-size: 40px;
+}
+
+body {
+  margin: 0;
+  background-color: #000;
+}
+
+.page .header-wrapper {
+  position: sticky;
+  height: 140px;
+  width: 100%;
+  background-color: #000;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.page .header-wrapper .logo {
+  padding: 40px 0 40px 20px;
+}
+.page .header-wrapper .logo img {
+  height: 55px;
+}
+.page .header-wrapper .button-back {
+  margin-right: 20px;
+}
+.page .header-wrapper .button-back a {
+  color: #fff;
+}
+.page .header-wrapper .button-back a:hover {
+  color: #ffd700;
+}
+.page .body-wrapper {
+  position: relative;
+  display: flex;
+}
+.page .body-wrapper .sidebar__item {
+  position: relative;
+}
+.page .body-wrapper .sidebar__item::before {
+  content: "";
+  position: absolute;
+  display: none;
+  top: 100%;
+  left: 50%;
+  margin: -12px 0 0 -12px;
+  width: 0;
+  height: 0;
+  border-bottom: 12px #0d0d0d solid;
+  border-left: 12px transparent solid;
+  border-right: 12px transparent solid;
+  transition: all 0.3s;
+}
+.page .body-wrapper .sidebar__item:hover::before {
+  display: block;
+}
+.page .body-wrapper .sidebar__item.active::after {
+  content: "";
+  position: absolute;
+  left: 88px;
+  display: block;
+  width: 0;
+  height: 0;
+  border-right: 12px solid #141414;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+}
+.page .body-wrapper .content {
+  position: relative;
+  background-color: #141414;
+  width: 100%;
+  height: 100vh;
+}
+.page .body-wrapper .content__triangle {
+  position: absolute;
+  left: -15px;
+  top: 30px;
+}
+
+/*# sourceMappingURL=style.css.map */
